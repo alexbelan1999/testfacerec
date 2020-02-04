@@ -3,9 +3,8 @@ import face_recognition
 import time
 
 clock1 = time.time()
-
 image = face_recognition.load_image_file("testphoto/bill_elon_steve1.jpg")
-face_locations = face_recognition.face_locations(image)
+face_locations = face_recognition.face_locations(image, number_of_times_to_upsample=0, model="cnn")
 
 print("I found {} face(s) in this photograph.".format(len(face_locations)))
 
