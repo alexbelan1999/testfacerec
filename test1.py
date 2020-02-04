@@ -19,4 +19,4 @@ for face_location in face_locations:
     pil_image.show()
 
 clock2 = time.time()
-print("Time:",clock2-clock1)
+print("Time:", clock2 - clock1)
