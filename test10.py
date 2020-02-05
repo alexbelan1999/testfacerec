@@ -5,8 +5,9 @@ input_movie = cv2.VideoCapture("Bill.mp4")
 length = int(input_movie.get(cv2.CAP_PROP_FRAME_COUNT))
 
 # Create an output movie file (make sure resolution/frame rate matches input video!)
+#fourcc = cv2.VideoWriter_fourcc(*'MJPG')
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-output_movie = cv2.VideoWriter('output.avi', fourcc, 29.97, (640, 360))
+output_movie = cv2.VideoWriter('output.avi', fourcc, 24.0, (1280, 720))
 
 bill_image = face_recognition.load_image_file("person/Bill_Gates01.jpg")
 elon_image = face_recognition.load_image_file("person/Elon_Musk01.jpg")
